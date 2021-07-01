@@ -35,3 +35,5 @@ data = {
 }
 data_in_json = json.dumps(data)
 
+if __name__ == "__main__":
+    app.run()
