@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 api_key = "AIzaSyDlp19ogXeUuugzO3UZYRUqL9RVSzo2nQk"
 
-@app.route('/', methods=["POST"])
+@app.route('/getbook', methods=["POST"])
 
 def getbooktitle():
     file = request.files['image']
