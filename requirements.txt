@@ -1,6 +1,10 @@
-opencv_python==4.5.2.54
-requests==2.25.1
-pytesseract==0.3.7
+click==8.0.1
+colorama==0.4.4
 Flask==2.0.1
+gunicorn==20.1.0
+itsdangerous==2.0.1
+Jinja2==3.0.1
+MarkupSafe==2.0.1
 Pillow==8.2.0
-gunicorn
+pytesseract==0.3.7
+Werkzeug==2.0.1
