@@ -21,8 +21,8 @@ def getbooktitle():
         volume_info = json_response['items'][0]['volumeInfo']
         title = volume_info.get('title')
         author = volume_info.get('authors')
-        images_link = volume_info['imageLinks']
-        return jsonify({'title': title,'author': author,'images_links': images_link})
+        imageslink = volume_info['imageLinks']
+        return jsonify({'title': title,'author': author,'imageslinks': imageslink})
 
 if __name__ == "__main__":
     app.run(debug=True)
