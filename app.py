@@ -7,7 +7,7 @@ import requests
 
 app = Flask(__name__)
 
-@app.route("/", methods=["POST"])
+@app.route("/getbook", methods=["POST"])
 def getbooktitle():
     if request.method == "POST":
         file = request.files['image']
