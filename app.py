@@ -2,9 +2,8 @@ from flask import Flask, request, jsonify
 import pytesseract
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 from PIL import Image
-import json
 import requests
-import cv2
+
 
 app = Flask(__name__)
 
@@ -27,3 +26,4 @@ def getbooktitle():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
