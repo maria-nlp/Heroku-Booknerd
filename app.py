@@ -14,7 +14,7 @@ def getbooktitle():
         img = Image.open(file.stream)
         booktitle = pytesseract.image_to_string(img)
 
-        api_key = "AIzaSyDlp19ogXeUuugzO3UZYRUqL9RVSzo2nQk"
+        api_key = "AIzaSyDNBwiEqYoB0M54qgxi1OOAUBCG1-5lmHA"
         url = f"https://www.googleapis.com/books/v1/volumes?q={booktitle}&key={api_key}"
         response = requests.get(url)
         json_response = response.json()
