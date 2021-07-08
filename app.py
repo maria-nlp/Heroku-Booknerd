@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 import pytesseract
-pytesseract.pytesseract.tesseract_cmd = ‘/app/.main/usr/bin/tesseract’
+pytesseract.pytesseract.tesseract_cmd = ‘/app/.apt/usr/bin/tesseract’
 from PIL import Image
 import requests
 
