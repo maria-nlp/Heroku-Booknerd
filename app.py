@@ -18,7 +18,7 @@ def getbooktitle():
         url = f"https://www.googleapis.com/books/v1/volumes?q={booktitle}&key={api_key}"
         response = requests.get(url)
         json_response = response.json()
-        volume_info = json_response['items'][0]['volumeInfo']
+        volume_info = json_response["items"][0]["volumeInfo"]
         title = volume_info.get('title')
         author = volume_info.get('authors')
         imageslink = volume_info['imageLinks']
