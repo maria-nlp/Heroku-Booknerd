@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import pytesseract
 pytesseract.pytesseract.tesseract_cmd = '/app/vendor/tesseract-ocr/bin/tesseract'
-from PIL import Image
+from PIL import Image, ImageOps
 import requests
 
 
@@ -12,6 +12,7 @@ def getbooktitle():
     if request.method == "POST":
         file = request.files['image']
         img = Image.open(file.stream)
+        grey = ImageOps.grayscale(img)
         booktitle = pytesseract.image_to_string(img)
 
         api_key = "AIzaSyDNBwiEqYoB0M54qgxi1OOAUBCG1-5lmHA"
