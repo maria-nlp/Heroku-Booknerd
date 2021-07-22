@@ -13,7 +13,7 @@ def getbooktitle():
         file = request.files['image']
         img = Image.open(file.stream)
         grey = ImageOps.grayscale(img)
-        booktitle = pytesseract.image_to_string(img)
+        booktitle = pytesseract.image_to_string(grey)
 
         api_key = "AIzaSyDNBwiEqYoB0M54qgxi1OOAUBCG1-5lmHA"
         url = f"https://www.googleapis.com/books/v1/volumes?q={booktitle}&key={api_key}&maxResults=15"
