@@ -23,7 +23,7 @@ def getbooktitle():
         author = volume_info.get('authors')
         imageslink = volume_info['imageLinks']
         smallimage = imageslink['smallThumbnail']
-        return json_response
+        return jsonify({"books": [{'title': title, 'author': author[0], 'imageLink': smallimage}]})
 
 if __name__ == "__main__":
     app.run()
