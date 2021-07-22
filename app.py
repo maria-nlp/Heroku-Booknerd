@@ -15,7 +15,7 @@ def getbooktitle():
         booktitle = pytesseract.image_to_string(img)
 
         api_key = "AIzaSyDNBwiEqYoB0M54qgxi1OOAUBCG1-5lmHA"
-        url = f"https://www.googleapis.com/books/v1/volumes?q={booktitle}&key={api_key}"
+        url = f"https://www.googleapis.com/books/v1/volumes?q={booktitle}&key={api_key}&country=US"
         response = requests.get(url)
         json_response = response.json()
         #volume_info = json_response["items"][0]["volumeInfo"]
